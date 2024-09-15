@@ -42,6 +42,7 @@ def fit(dataset, VSdataset, object_num,  max_search=True, method='EHVI', assign_
         Some common methods include:
         - 'EHVI': Expected Hypervolume Improvement
         - 'PI': Probability of Improvement
+        - 'UCB': Upper Confidence Bound
     :param assign_model: bool or str, optional, default=False
         If `assign_model` is False, the surrogate model is chosen automatically by MultiBgolearn.
         If `assign_model` is one of the following strings, the corresponding model is assigned:
@@ -86,7 +87,7 @@ def fit(dataset, VSdataset, object_num,  max_search=True, method='EHVI', assign_
     vs_mean, vs_vars = pre_model(X, y, VS, best_model, bootstrap)
 
     # Perform multi-objective Bayesian global optimization (MOBO) to get the next recommended data point
-    res_index, improvements = multi_BGO(y, vs_mean, vs_vars, max_search, method)
+    res_index, improvements = multi_BGO(y, vs_mean, vs_vars, method, max_search, )
 
     # Print the recommended data point and return it along with improvements and its index in VS
     print(f"The next recommended data by method '{method}' is: {np.array(ori_VS)[res_index]}")

@@ -17,6 +17,7 @@ import os
 import pygmo as pg
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import LeaveOneOut
+import scipy.stats as stats
 
 def normalize_data(X, y, VS):
     """
@@ -311,7 +312,7 @@ def pre_model(X, y, VS, model_name, bootstrap_times=5):
 
 
 
-def Monte_Carlo(y, vs_mean, vs_var, times=10):
+def Monte_Carlo( vs_mean, vs_var, times=10):
     """
     Perform Monte Carlo sampling from a multivariate Gaussian distribution 
     with given mean and variance.
@@ -394,3 +395,70 @@ def get_pareto_front(y, max_search):
         pareto_front = -pareto_front
 
     return pareto_front
+
+def imp_prob(vs_mean, vs_vars, y, max_search):
+    """
+    Computes the probability that each Gaussian distribution in a multi-Gaussian setup
+    exceeds or falls below a threshold value in y (depending on max_search).
+    
+    Parameters:
+    vs_mean (array-like): Mean values of the multi-Gaussian distributions.
+    vs_vars (array-like): Variance values of the multi-Gaussian distributions.
+    y (array-like): Array of observed values.
+    max_search (bool): If True, computes the probability of exceeding the max of y;
+                       otherwise, computes the probability of falling below the min of y.
+    
+    Returns:
+    prob (array-like): Array of probabilities for each distribution.
+    """
+    # Convert input arrays to numpy arrays for efficient calculations
+    vs_mean = np.array(vs_mean)
+    vs_vars = np.array(vs_vars)
+    y = np.array(y)
+    
+    std_devs = np.sqrt(vs_vars)  # Calculate standard deviations from variances
+    
+    if max_search:
+        y_opt = y.max()  # Find the maximum value in y
+        # Calculate probability that each Gaussian distribution exceeds y_opt
+        prob = 1 - stats.norm.cdf(y_opt, loc=vs_mean, scale=std_devs)
+    else:
+        y_opt = y.min()  # Find the minimum value in y
+        # Calculate probability that each Gaussian distribution falls below y_opt
+        prob = stats.norm.cdf(y_opt, loc=vs_mean, scale=std_devs)
+    print(prob)
+    return prob
+
+
+def imp_ucb(vs_mean, vs_vars, y, max_search):
+    """
+    Computes the Upper Confidence Bound (UCB) for a multi-Gaussian setup.
+    
+    Parameters:
+    vs_mean (array-like): Mean values of the multi-Gaussian distributions.
+    vs_vars (array-like): Variance values of the multi-Gaussian distributions.
+    y (array-like): Array of observed values.
+    max_search (bool): If True, computes UCB for maximizing values;
+                       otherwise, computes UCB for minimizing values.
+    
+    Returns:
+    ucb (array-like): Array of UCB values for each distribution.
+    """
+    # Convert input arrays to numpy arrays
+    vs_mean = np.array(vs_mean)
+    vs_vars = np.array(vs_vars)
+    y = np.array(y)
+    
+    if max_search:
+        y_opt = y.max()  # Get the maximum observed value
+        # Compute UCB for maximization: mean + variance - y_opt
+        ucb = vs_mean + vs_vars - y_opt
+    else:
+        y_opt = y.min()  # Get the minimum observed value
+        # Compute UCB for minimization: y_opt - (mean - variance)
+        ucb = y_opt - (vs_mean - vs_vars)
+    
+    # Set negative UCB values to zero, as negative bounds don't make sense
+    ucb[ucb < 0] = 0
+    return ucb
+    
