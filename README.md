@@ -24,9 +24,7 @@ The repository provides the source code of the **MultiBgolearn** package along w
 To install **MultiBgolearn**, clone the repository and install the dependencies:
 
 ```bash
-git clone https://github.com/Bin-Cao/MultiBgolearn.git
-cd MultiBgolearn
-pip install -r requirements.txt
+pip install MultiBgolearn
 ```
 
 ## Usage
