@@ -34,7 +34,7 @@ The **MultiBgolearn** package is designed for ease of use in materials design pr
 ### Example
 
 ```python
-from multibgolearn import MultiBgolearn
+from MultiBgolearn import bgo
 
 # Define your dataset and virtual space paths
 dataset_path = './data/dataset.csv'
@@ -44,7 +44,7 @@ VS_path = './virtual_space/'
 object_num = 3
 
 # Apply Multi-Objective Bayesian Global Optimization
-VS_recommended, improvements, index = MultiBgolearn.fit(dataset_path, VS_path, object_num, 
+VS_recommended, improvements, index = bgo.fit(dataset_path, VS_path, object_num, 
                                                         max_search=True, method='EHVI', 
                                                         assign_model='GaussianProcess', 
                                                         bootstrap=5)
