@@ -24,9 +24,7 @@ The repository provides the source code of the **MultiBgolearn** package along w
 To install **MultiBgolearn**, clone the repository and install the dependencies:
 
 ```bash
-git clone https://github.com/Bin-Cao/MultiBgolearn.git
-cd MultiBgolearn
-pip install -r requirements.txt
+pip install MultiBgolearn
 ```
 
 ## Usage
@@ -36,7 +34,7 @@ The **MultiBgolearn** package is designed for ease of use in materials design pr
 ### Example
 
 ```python
-from multibgolearn import MultiBgolearn
+from MultiBgolearn import bgo
 
 # Define your dataset and virtual space paths
 dataset_path = './data/dataset.csv'
@@ -46,7 +44,7 @@ VS_path = './virtual_space/'
 object_num = 3
 
 # Apply Multi-Objective Bayesian Global Optimization
-VS_recommended, improvements, index = MultiBgolearn.fit(dataset_path, VS_path, object_num, 
+VS_recommended, improvements, index = bgo.fit(dataset_path, VS_path, object_num, 
                                                         max_search=True, method='EHVI', 
                                                         assign_model='GaussianProcess', 
                                                         bootstrap=5)
@@ -120,6 +118,4 @@ If you use **MultiBgolearn** in your research, please cite:
 }
 ```
 
-## Acknowledgments
 
-This project is developed at the **Guangzhou Municipal Key Laboratory of Materials Informatics, Advanced Materials Thrust**, HKUST(GZ), Guangzhou, Guangdong, China. Special thanks to the team for their continuous support in developing this package.
