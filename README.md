@@ -118,6 +118,4 @@ If you use **MultiBgolearn** in your research, please cite:
 }
 ```
 
-## Acknowledgments
 
-This project is developed at the **Guangzhou Municipal Key Laboratory of Materials Informatics, Advanced Materials Thrust**, HKUST(GZ), Guangzhou, Guangdong, China. Special thanks to the team for their continuous support in developing this package.
