@@ -5,6 +5,15 @@
 [![Python](https://img.shields.io/badge/python-3.6%2B-blue.svg)](https://www.python.org/downloads/)
 [![Issues](https://img.shields.io/github/issues/Bin-Cao/MultiBgolearn)](https://github.com/Bin-Cao/MultiBgolearn/issues)
 
+
+**Note:** Sometimes, the installation of a dependent package, `pygmo`, may fail when using `pip`. To resolve this issue, it is recommended to install `pygmo` via `conda` by running the following command:
+
+```bash
+conda install -c conda-forge pygmo
+```
+
+
+
 ## Overview
 
 **MultiBgolearn** is a Python package designed for multi-objective Bayesian global optimization (MOBO), specifically tailored for materials design. It extends the functionalities of the **Bgolearn** package, which focuses on single-objective optimization, by enabling the simultaneous optimization of multiple material properties. This makes **MultiBgolearn** highly suitable for real-world applications where trade-offs between competing objectives are common.
