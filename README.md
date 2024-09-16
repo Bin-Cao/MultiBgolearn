@@ -47,13 +47,13 @@ from MultiBgolearn import bgo
 
 # Define your dataset and virtual space paths
 dataset_path = './data/dataset.csv'
-VS_path = './virtual_space/'
+VSdataset = 'virtual_sample.xlsx'
 
 # Set the number of objectives (e.g., 3 for three-objective optimization)
 object_num = 3
 
 # Apply Multi-Objective Bayesian Global Optimization
-VS_recommended, improvements, index = bgo.fit(dataset_path, VS_path, object_num, 
+VS_recommended, improvements, index = bgo.fit(dataset_path, VSdataset, object_num, 
                                                         max_search=True, method='EHVI', 
                                                         assign_model='GaussianProcess', 
                                                         bootstrap=5)
