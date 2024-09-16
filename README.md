@@ -114,7 +114,7 @@ For questions or suggestions, feel free to contact:
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
 
-## Citation
+## Architecture
 
 The system architecture diagram shows the key modules of the MultiBgolearn algorithm and their connections.
 
