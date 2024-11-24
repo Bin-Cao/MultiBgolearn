@@ -114,6 +114,8 @@ For questions or suggestions, feel free to contact:
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
 
+![image](https://github.com/user-attachments/assets/8cb348dd-c675-4816-9b28-e5218c2b8a4c)
+
 ## Architecture
 
 The system architecture diagram shows the key modules of the MultiBgolearn algorithm and their connections.
