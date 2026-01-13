@@ -21,10 +21,21 @@
 ---
 
 # MultiBgolearn: Multi-Objective Bayesian Global Optimization for Materials Design
-[HomePage](http://bgolearn.caobin.asia/) 
+
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 [![Python](https://img.shields.io/badge/python-3.6%2B-blue.svg)](https://www.python.org/downloads/)
-[![Issues](https://img.shields.io/github/issues/Bin-Cao/MultiBgolearn)](https://github.com/Bin-Cao/MultiBgolearn/issues)
+
+
+## [**Paper**](https://doi.org/10.48550/arXiv.2601.06820) | [**Report**](https://cmc2025.scimeeting.cn/cn/web/speaker-detail/27167?user_id=ZXvycJpgjG2WSbabyEmiSA_d_d) | [**Handbook**](https://bgolearn.netlify.app/) 
+
+Please star this project to support open-source development.
+For questions or collaboration, contact **Dr. Bin Cao** ([bcao686@connect.hkust-gz.edu.cn](mailto:bcao686@connect.hkust-gz.edu.cn)).
+
+The Bgolearn project has received support from the *Shanghai Artificial Intelligence Open Source Award Project Support Plan (2025)* (**[上海市人工智能开源奖励项目支持计划](https://www.sheitc.sh.gov.cn/cyfz/20250728/e571042d40384fcf859a347eb99e10df.html), 2025,[Project](https://github.com/Bin-Cao/Bgolearn/blob/main/figures/funding.png)**).
+
+
+### [Bgolearn: a Unified Bayesian Optimization Framework for Accelerating Materials Discovery](https://arxiv.org/abs/2406.15469)
+<img width="5257" height="3400" alt="workflow" src="https://github.com/user-attachments/assets/a0850259-4f08-4bb6-88d7-468d4d8332e6" />
 
 
 **Note:** Sometimes, the installation of a dependent package, `pygmo`, may fail when using `pip`. To resolve this issue, it is recommended to install `pygmo` via `conda` by running the following command:
