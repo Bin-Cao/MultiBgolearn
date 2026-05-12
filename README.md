@@ -7,7 +7,7 @@
 [![Python](https://img.shields.io/badge/python-3.6%2B-blue.svg)](https://www.python.org/downloads/)
 
 
-## [**Paper**](https://doi.org/10.48550/arXiv.2601.06820) | [**Report**](https://cmc2025.scimeeting.cn/cn/web/speaker-detail/27167?user_id=ZXvycJpgjG2WSbabyEmiSA_d_d) | [**Handbook**](https://bgolearn.netlify.app/) 
+## [**Bgolearn**](https://github.com/Bin-Cao/Bgolearn) | [**Paper**](https://doi.org/10.48550/arXiv.2601.06820) | [**Report**](https://cmc2025.scimeeting.cn/cn/web/speaker-detail/27167?user_id=ZXvycJpgjG2WSbabyEmiSA_d_d) | [**Handbook**](https://bgolearn.netlify.app/) 
 
 Please star this project to support open-source development.
 For questions or collaboration, contact **Dr. Bin Cao** ([bcao686@connect.hkust-gz.edu.cn](mailto:bcao686@connect.hkust-gz.edu.cn)).
