@@ -1,11 +1,36 @@
 
+<h1 align="center">MultiBgolearn</h1>
+
+<p align="center">
+  Multi-Objective Bayesian Global Optimization Framework for Materials Design
+</p>
 
 
-# MultiBgolearn: Multi-Objective Bayesian Global Optimization for Materials Design
+<p align="center">
+  <a href="https://github.com/Bin-Cao/MultiBgolearn/stargazers">
+    <img src="https://img.shields.io/github/stars/Bin-Cao/MultiBgolearn?style=social" alt="GitHub Stars">
+  </a>
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
-[![Python](https://img.shields.io/badge/python-3.6%2B-blue.svg)](https://www.python.org/downloads/)
+  <a href="https://github.com/Bin-Cao/MultiBgolearn/network/members">
+    <img src="https://img.shields.io/github/forks/Bin-Cao/MultiBgolearn?style=social" alt="GitHub Forks">
+  </a>
 
+  <a href="https://github.com/Bin-Cao/MultiBgolearn/issues">
+    <img src="https://img.shields.io/github/issues/Bin-Cao/MultiBgolearn" alt="Open Issues">
+  </a>
+
+  <a href="https://github.com/Bin-Cao/MultiBgolearn/issues?q=is%3Aissue+is%3Aclosed">
+    <img src="https://img.shields.io/github/issues-closed/Bin-Cao/MultiBgolearn" alt="Closed Issues">
+  </a>
+
+  <a href="https://github.com/Bin-Cao/MultiBgolearn/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/Bin-Cao/MultiBgolearn" alt="License">
+  </a>
+
+  <a href="https://pypi.org/project/MultiBgolearn/">
+    <img src="https://img.shields.io/pypi/v/MultiBgolearn" alt="PyPI">
+  </a>
+</p>
 
 ## [**Bgolearn**](https://github.com/Bin-Cao/Bgolearn) | [**Paper**](https://doi.org/10.48550/arXiv.2601.06820) | [**Report**](https://cmc2025.scimeeting.cn/cn/web/speaker-detail/27167?user_id=ZXvycJpgjG2WSbabyEmiSA_d_d) | [**Handbook**](https://bgolearn.netlify.app/) 
 
